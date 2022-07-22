@@ -5,7 +5,7 @@ import { useLocalStorege } from '../../Hooks/useLocalStorage';
 
 export default function SearchBar() {
   const dispatch = useDispatch();
-  const [value, setValue] = useLocalStorege('value','')
+  const [value, setValue] = useLocalStorege('value', '')
   const allBeersx2 = useSelector(state => state.beers);
 
   const onChange = (e) => {           // handleInput

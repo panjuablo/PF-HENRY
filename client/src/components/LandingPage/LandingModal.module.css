@@ -1,9 +1,10 @@
-.overlay{
-    padding: 40vh,100vh,40vh,100vh;
+.overlay {
+    padding: 40vh, 100vh, 40vh, 100vh;
     background-color: rgba(0, 0, 139, 0.295);
-    
+
 }
-.modal-container{
+
+.modal-container {
     background-color: blueviolet;
     color: yellow;
     border-radius: 50px;

@@ -7,46 +7,46 @@ import BeerCard from "../BeerCard/BeerCard";
 import Pagination from "../Pagination/Pagination";
 
 export default function ShowBeers() {
-    const dispatch = useDispatch();
-    const allBeers = useSelector(state => state.allBeers);
-    const allBeers1 = useSelector(state => state.search);
-    const styles = useSelector(state => state.styles);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [beerPerPage, setBeerPerPage] = useState(10);
-    const lastBeer = currentPage * beerPerPage;
-    const firstBeer = lastBeer - beerPerPage;
-    const currentBeer = allBeers.slice(firstBeer, lastBeer);
-    const page = (pageNumber) => { setCurrentPage(pageNumber) };
-    const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
+  const allBeers = useSelector(state => state.allBeers);
+  const allBeers1 = useSelector(state => state.search);
+  const styles = useSelector(state => state.styles);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [beerPerPage, setBeerPerPage] = useState(10);
+  const lastBeer = currentPage * beerPerPage;
+  const firstBeer = lastBeer - beerPerPage;
+  const currentBeer = allBeers.slice(firstBeer, lastBeer);
+  const page = (pageNumber) => { setCurrentPage(pageNumber) };
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (!allBeers1.length) {
       dispatch(getAllBeers());
     }
   }, [dispatch]);
-  
+
   return (
     <div className={style.showBeers}>
       <div className={style.cardsContainer}>
         <div className={style.cardsBox}>
-                    {allBeers.length === 0 ? <span>(<Loading setLoading={setLoading}/>)</span> : currentBeer?.map(beer => {
-                        return (
-                            <BeerCard
-                                id={beer.id}
-                                key={beer.id}
-                                name={beer.name}
-                                description={beer.description}
-                                image={beer.image}
-                            // style={beer.style}
-                            // origin={beer.origin}
-                            />
-                        )
-                    })}
-                    <Pagination beerPerPage={beerPerPage} allBeers={allBeers} currentBeer={currentBeer} page={page} />
-                </div>
-            </div>
+          {allBeers.length === 0 ? <span>(<Loading setLoading={setLoading} />)</span> : currentBeer?.map(beer => {
+            return (
+              <BeerCard
+                id={beer.id}
+                key={beer.id}
+                name={beer.name}
+                description={beer.description}
+                image={beer.image}
+              // style={beer.style}
+              // origin={beer.origin}
+              />
+            )
+          })}
+          <Pagination beerPerPage={beerPerPage} allBeers={allBeers} currentBeer={currentBeer} page={page} />
         </div>
-  
+      </div>
+    </div>
+
   );
 }
 

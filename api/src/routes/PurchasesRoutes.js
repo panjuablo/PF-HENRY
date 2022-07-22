@@ -3,7 +3,7 @@ const { getAllPurchases, postPurchases } = require('../controllers/PurchasesCont
 
 const router = Router();
 
-router.get('/',getAllPurchases)
-router.post('/',postPurchases)
+router.get('/', getAllPurchases)
+router.post('/', postPurchases)
 
 module.exports = router

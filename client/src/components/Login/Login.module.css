@@ -1,9 +1,11 @@
-.container{
+.container {
     margin: 100px;
 }
-.password{
-margin: 20px;
+
+.password {
+    margin: 20px;
 }
-.submit{
+
+.submit {
     margin: 10px;
 }

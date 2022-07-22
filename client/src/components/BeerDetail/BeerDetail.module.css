@@ -1,11 +1,11 @@
-.detailPage{
+.detailPage {
     background-color: green;
     display: flex;
     flex-direction: column;
-    
+
 }
 
-.box{
+.box {
     display: flex;
     align-content: inherit;
     flex-direction: column;

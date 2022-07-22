@@ -1,4 +1,4 @@
-.cardContainer{
+.cardContainer {
     background-color: brown;
     width: 15vw;
     height: 17rem;
@@ -9,7 +9,7 @@
     color: aqua;
     flex-direction: column;
     justify-content: space-evenly;
-    text-align:center;
+    text-align: center;
     align-items: center;
     padding: 16px;
     border-radius: 10px;
@@ -17,10 +17,10 @@
 
 }
 
-.content{
+.content {
     margin: 1rem 0 0 0;
 }
 
-.cardImg{
+.cardImg {
     width: 45%;
 }

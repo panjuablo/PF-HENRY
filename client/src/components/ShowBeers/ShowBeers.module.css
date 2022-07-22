@@ -1,4 +1,4 @@
-.showBeers{
+.showBeers {
     display: flex;
     width: auto;
     height: auto;
@@ -7,16 +7,17 @@
     max-height: 140vh;
     min-height: 100vh;
 }
-.cardsBox{
+
+.cardsBox {
     display: flex;
     flex-wrap: wrap;
     height: 85%;
     justify-content: space-evenly;
     margin: 1rem, 0;
 }
-.cardsContainer{
-   width: auto;
-   height: auto;
-   padding: 0 0 2rem 0;
-}
 
+.cardsContainer {
+    width: auto;
+    height: auto;
+    padding: 0 0 2rem 0;
+}

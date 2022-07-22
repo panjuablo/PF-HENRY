@@ -1,14 +1,15 @@
 
-import {ORDER_BY_NAME,FILTER_BY_BREWERY,} from '../const'
+import { ORDER_BY_NAME, FILTER_BY_BREWERY, } from '../const'
 
 
 import {
-  GET_BEERS, GET_BEER_DETAIL,SEARCH_BAR, REMOVE_DETAIL, POST_BEER, GET_TYPE, POST_USER} from "../const";
+  GET_BEERS, GET_BEER_DETAIL, SEARCH_BAR, REMOVE_DETAIL, POST_BEER, GET_TYPE, POST_USER
+} from "../const";
 
 
 
 const initialState = {
-  search:[],
+  search: [],
   beers: [],
   allBeers: [],
   detail: {},
@@ -26,7 +27,7 @@ function Reducer(state = initialState, action) {
         ...state,
         allBeers: action.payload,
         beers: action.payload,
-        
+
       };
 
 
@@ -52,7 +53,7 @@ function Reducer(state = initialState, action) {
     case SEARCH_BAR: {
       return {
         ...state,
-        search:action.payload,
+        search: action.payload,
         allBeers: action.payload
       }
     }
@@ -104,7 +105,7 @@ function Reducer(state = initialState, action) {
         ...state
       };
 
-      case POST_USER:
+    case POST_USER:
       return {
         ...state
       };

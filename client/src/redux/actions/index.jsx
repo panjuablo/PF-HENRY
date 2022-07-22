@@ -1,7 +1,9 @@
 import axios from "axios";
-import {ALL_API, ALL_ID, ALL_NAME,
+import {
+  ALL_API, ALL_ID, ALL_NAME,
   GET_BEERS, GET_BEER_DETAIL,
-  REMOVE_DETAIL, SEARCH_BAR, POST_BEER, POST_USER } from "../const";
+  REMOVE_DETAIL, SEARCH_BAR, POST_BEER, POST_USER
+} from "../const";
 
 export function getAllBeers() {
   return async function (dispatch) {
@@ -29,42 +31,42 @@ export const removeDetail = () => {
   };
 };
 
-export function searchBar(payload){
-  return async function(dispatch){
-      try{
-          const search = await axios.get(ALL_NAME + payload);
-          return dispatch ({
-              type: SEARCH_BAR,
-              payload: search.data
-          })
-      } catch(error){
-          if(error.response){
-              alert(error.response.data)
-          }
+export function searchBar(payload) {
+  return async function (dispatch) {
+    try {
+      const search = await axios.get(ALL_NAME + payload);
+      return dispatch({
+        type: SEARCH_BAR,
+        payload: search.data
+      })
+    } catch (error) {
+      if (error.response) {
+        alert(error.response.data)
       }
+    }
   }
 };
 
-export function postBeer(payload){
-  return async function(dispatch){
-    try{
+export function postBeer(payload) {
+  return async function (dispatch) {
+    try {
       const post = await axios.post(POST_BEER, payload);
       return post;
-    }catch(error){
-      if(error.response){
+    } catch (error) {
+      if (error.response) {
         return alert(error.response.data)
       }
     }
   }
 };
 
-export function postUser(payload){
-  return async function(dispatch){
-    try{
+export function postUser(payload) {
+  return async function (dispatch) {
+    try {
       const post = await axios.post(POST_USER, payload);
       return post;
-    }catch(error){
-      if(error.response){
+    } catch (error) {
+      if (error.response) {
         return alert(error.response.data)
       }
     }

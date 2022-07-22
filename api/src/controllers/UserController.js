@@ -22,7 +22,7 @@ async function postUser(req, res, next) {
                 email
             },
             {
-                fields: ["id", "name", "surname", "address","email"],
+                fields: ["id", "name", "surname", "address", "email"],
             }
         );
         return res.json(newUser);
