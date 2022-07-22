@@ -11,11 +11,11 @@ export default function SearchBar() {
   const onChange = (e) => {           // handleInput
     e.preventDefault();
     setValue(e.target.value);
+    dispatch(searchBar(value));
   };
 
   const onSearch = (searchTerm) => {       //handleSubmit
     setValue(searchTerm)
-    dispatch(searchBar(value));
     setValue('')
   };
 
